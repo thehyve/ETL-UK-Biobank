@@ -7,7 +7,7 @@ database:
   password: 'postgres'
   query:
 
-source_data_folder: './resources/synthetic_data/small-set'
+source_data_folder: './resources/synthetic_data/small_set'
 
 schema_translate_map:
   cdm_schema: 'cdm'
@@ -16,7 +16,7 @@ schema_translate_map:
 
 run_options:
   load_vocabulary: False
-  load_custom_vocabulary: True
+  load_custom_vocabulary: False
   load_source_to_concept_map: True
   write_reports: False
 
