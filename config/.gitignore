@@ -1,5 +1,6 @@
 *
 !.gitignore
 !config-sample.yml
+!config-sample-new.yml
 !source_config.yml
 !logging-sample.yml

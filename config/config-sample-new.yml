@@ -1,0 +1,24 @@
+database:
+  drivername: 'postgresql'
+  host: '127.0.0.1'  # (localhost)
+  port: 5432
+  database_name: 'ohdsi'
+  username: 'postgres'
+  password: 'postgres'
+  query:
+
+source_data_folder: './resources/synthetic_data/small-set'
+
+schema_translate_map:
+  cdm_schema: 'cdm'
+  vocabulary_schema: 'vocab'
+  source_schema: 'source_data'
+
+run_options:
+  load_vocabulary: False
+  load_custom_vocabulary: True
+  load_source_to_concept_map: True
+  write_reports: False
+
+sql_parameters:
+  #placeholder: 'value'
