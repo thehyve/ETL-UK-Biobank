@@ -12,11 +12,12 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 
+import math
 import pandas as pd
 
 
 def is_null(value) -> bool:
-    if pd.isnull(value) or not value:  # '0' string is a valid code, won't be filtered by this
+    if pd.isnull(value) or value is None or not value or value == 'nan':  # '0' string is a valid code, won't be filtered by this
         return True
     else:
         return False

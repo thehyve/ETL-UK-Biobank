@@ -246,16 +246,20 @@ class Wrapper(BaseWrapper):
         """
         gp_datetime = date_util.get_datetime(date, format, default_date)
 
+        person_source_value = str(person_source_value)
+
         if not gp_datetime:
             return default_date
 
         # 1902-02-02 and 1903-03-03 are placeholder dates for events happening around birth
         if gp_datetime == datetime.datetime(1902, 2, 2) or gp_datetime == datetime.datetime(1903, 3, 3):
             year_of_birth = self.lookup_person_yob(person_source_value)
+            if year_of_birth is None:
+                year_of_birth = 1970  # what should this be?
             return datetime.datetime(year_of_birth, 7, 1)
 
         # Dates in year 2037 are placeholder for unknown date
         if gp_datetime.year == 2037:
-            return default_date
+            return date_util.DEFAULT_DATETIME
 
         return gp_datetime

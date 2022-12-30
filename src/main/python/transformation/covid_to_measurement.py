@@ -18,7 +18,7 @@ def covid_to_measurement(wrapper: Wrapper) -> List[Wrapper.cdm.Measurement]:
 
         person_id = row['eid']
 
-        visit_occurrence_id = wrapper.lookup_visit_occurrence_id(person_id=row['eid'], visit_start_date=date)
+        visit_occurrence_id = wrapper.lookup_visit_occurrence_id(person_id=str(row['eid']), visit_start_date=date)
 
         result = {
             '1': 45884084,  # Positive
