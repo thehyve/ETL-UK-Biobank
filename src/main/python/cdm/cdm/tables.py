@@ -11,8 +11,8 @@ from delphyne.cdm.cdm531.health_system_data import *
 from delphyne.cdm.cdm531.health_economics import *
 from delphyne.cdm.cdm531.derived_elements import *
 
-from delphyne.cdm.vocabularies import *
-from delphyne.cdm.metadata import *
+from delphyne.cdm.cdm531.vocabularies import *
+from delphyne.cdm.cdm531.metadata import *
 
 from delphyne.database import NAMING_CONVENTION
 
@@ -220,11 +220,11 @@ class ConditionEra(BaseConditionEraCdm531, Base):
 ########################################################################
 
 
-class Metadata(BaseMetadata, Base):
+class Metadata(BaseMetadataCdm531, Base):
     pass
 
 
-class CdmSource(BaseCdmSource, Base):
+class CdmSource(BaseCdmSourceCdm531, Base):
     pass
 
 
@@ -233,47 +233,47 @@ class CdmSource(BaseCdmSource, Base):
 ########################################################################
 
 
-class Concept(BaseConcept, Base):
+class Concept(BaseConceptCdm531, Base):
     pass
 
 
-class Vocabulary(BaseVocabulary, Base):
+class Vocabulary(BaseVocabularyCdm531, Base):
     pass
 
 
-class Domain(BaseDomain, Base):
+class Domain(BaseDomainCdm531, Base):
     pass
 
 
-class ConceptClass(BaseConceptClass, Base):
+class ConceptClass(BaseConceptClassCdm531, Base):
     pass
 
 
-class ConceptRelationship(BaseConceptRelationship, Base):
+class ConceptRelationship(BaseConceptRelationshipCdm531, Base):
     pass
 
 
-class Relationship(BaseRelationship, Base):
+class Relationship(BaseRelationshipCdm531, Base):
     pass
 
 
-class ConceptSynonym(BaseConceptSynonym, Base):
+class ConceptSynonym(BaseConceptSynonymCdm531, Base):
     pass
 
 
-class ConceptAncestor(BaseConceptAncestor, Base):
+class ConceptAncestor(BaseConceptAncestorCdm531, Base):
     pass
 
 
-class SourceToConceptMap(BaseSourceToConceptMap, Base):
+class SourceToConceptMap(BaseSourceToConceptMapCdm531, Base):
     pass
 
 
-class SourceToConceptMapVersion(BaseSourceToConceptMapVersion, Base):
+class SourceToConceptMapVersion(BaseSourceToConceptMapVersionCdm531, Base):
     pass
 
 
-class DrugStrength(BaseDrugStrength, Base):
+class DrugStrength(BaseDrugStrengthCdm531, Base):
     pass
 
 
